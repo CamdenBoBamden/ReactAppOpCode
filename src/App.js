@@ -10,6 +10,7 @@ function App () {
   const [prevUrl, setPrevUrl] = useState('');
   const [loading, setLoading] = useState(true);
   const initialUrl = 'https://pokeapi.co/api/v2/pokemon'
+  
 
   useEffect ( () => {
     async function fetchData() {
@@ -52,6 +53,19 @@ function App () {
     setPokemonData(_pokemonData)
   };
   console.log(pokemonData);
+  function tick(){
+  const element =(
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  )}
+  ReactDOM.render(
+    element,
+    document.getElementById('root')
+  );
+  console.log(clock);
+  setInterval(tick, 1000);
   return (
 
       <div>
@@ -75,6 +89,7 @@ function App () {
          </>
        )
      }
+        
           <h2>It is {new Date().toLocaleTimeString()}.</h2>
       
       </div>
